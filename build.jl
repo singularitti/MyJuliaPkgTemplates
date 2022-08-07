@@ -1,13 +1,15 @@
 using PkgTemplates
-using PkgTemplates: Plugin, default_file, @plugin, @with_kw_noshow
-import PkgTemplates: view
+using PkgTemplates: Plugin, default_file, gen_file, render_file, combined_view, tags, @plugin, @with_kw_noshow
+import PkgTemplates: view, hook
+
+default_dir() = joinpath(pwd(), "templates")
 
 @plugin struct MyDocs <: Plugin
-    readme_md::String = default_file("README.md")
-    index_md::String = default_file("docs", "src", "index.md")
-    installation_md::String = default_file("docs", "src", "installation.md")
-    contributing_md::String = default_file("docs", "src", "contributing.md")
-    troubleshooting_md::String = default_file("docs", "src", "troubleshooting.md")
+    readme_md::String = joinpath(default_dir(), "README.md")
+    index_md::String = joinpath(default_dir(), "docs", "src", "index2.md")
+    installation_md::String = joinpath(default_dir(), "docs", "src", "installation.md")
+    contributing_md::String = joinpath(default_dir(), "docs", "src", "contributing.md")
+    troubleshooting_md::String = joinpath(default_dir(), "docs", "src", "troubleshooting.md")
 end
 
 view(::MyDocs, t::Template, pkg::AbstractString) = Dict(
@@ -15,6 +17,17 @@ view(::MyDocs, t::Template, pkg::AbstractString) = Dict(
     "PKG" => pkg,
     "jl" => "1.6.7"
 )
+
+function hook(p::MyDocs, t::Template, pkg_dir::AbstractString)
+    pkg = basename(pkg_dir)
+    for field in fieldnames(MyDocs)
+        value = getfield(p, field)
+        @show split(getfield(p, field), '/')[9:end]
+        path = joinpath(pkg_dir, split(getfield(p, field), '/')[9:end]...)
+        file = render_file(value, combined_view(p, t, pkg), tags(p))
+        gen_file(path, file)
+    end
+end
 
 t = Template(;
     user="MineralsCloud",
