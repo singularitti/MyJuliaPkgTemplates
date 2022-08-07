@@ -21,6 +21,12 @@
 [license-img]: https://img.shields.io/github/license/{{{USER}}}/{{{PKG}}}.jl
 [license-url]: https://github.com/{{{USER}}}/{{{PKG}}}.jl/blob/master/LICENSE
 
+The code is [hosted on GitHub](https://github.com/{{{USER}}}/{{{PKG}}}.jl),
+with some continuous integration services to test its validity.
+
+This repository is created and maintained by [@singularitti](https://github.com/singularitti).
+You are very welcome to contribute.
+
 ## Installation
 
 The package can be installed with the Julia package manager.
