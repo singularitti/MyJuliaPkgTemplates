@@ -7,7 +7,7 @@ task:
   env:
     matrix:
 {{#VERSIONS}}
-      JULIA_VERSION: {{{.}}}
+      - JULIA_VERSION: {{{.}}}
 {{/VERSIONS}}
   allow_failures: $JULIA_VERSION == 'nightly'
   install_script:
