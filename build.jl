@@ -12,7 +12,6 @@ default_dir() = joinpath(pwd(), "templates")
 end
 
 view(::MyDocs, t::Template, pkg::AbstractString) = Dict(
-    "org" => t.user,
     "PKG" => pkg,
     "jl" => "1.6.7"
 )
