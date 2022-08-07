@@ -1,7 +1,7 @@
 # [Installation guide](@id installation)
 
 Here are the installation instructions for package
-[`{{{PKG}}}`](https://github.com/{{{org}}}/{{{PKG}}}.jl).
+[`{{{PKG}}}`](https://github.com/{{{USER}}}/{{{PKG}}}.jl).
 If you have trouble installing it, please refer to our [Troubleshooting](@ref) page
 for more information.
 
@@ -123,7 +123,7 @@ in the second step above.
 ## Update `{{{PKG}}}`
 
 Please [watch](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications#configuring-your-watch-settings-for-an-individual-repository)
-our [GitHub repository](https://github.com/{{{org}}}/{{{PKG}}}.jl)
+our [GitHub repository](https://github.com/{{{USER}}}/{{{PKG}}}.jl)
 for new releases.
 Once we release a new version, you can update `{{{PKG}}}` by typing
 

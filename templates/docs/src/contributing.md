@@ -33,7 +33,7 @@ Pkg.instantiate()
 ## How to build docs
 
 Usually, the up-to-state doc is available in
-[here](https://{{{org}}}.github.io/{{{PKG}}}.jl/dev), but there are cases
+[here](https://{{{USER}}}.github.io/{{{PKG}}}.jl/dev), but there are cases
 where users need to build the doc themselves.
 
 After [instantiating](@ref) the project, go to `PKGROOT`, run

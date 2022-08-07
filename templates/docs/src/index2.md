@@ -4,15 +4,15 @@ CurrentModule = {{{PKG}}}
 
 # {{{PKG}}}
 
-Documentation for [{{{PKG}}}](https://github.com/{{{org}}}/{{{PKG}}}.jl).
+Documentation for [{{{PKG}}}](https://github.com/{{{USER}}}/{{{PKG}}}.jl).
 
 See the [Index](@ref main-index) for the complete list of documented functions
 and types.
 
-The code is [hosted on GitHub](https://github.com/{{{org}}}/{{{PKG}}}.jl),
+The code is [hosted on GitHub](https://github.com/{{{USER}}}/{{{PKG}}}.jl),
 with some continuous integration services to test its validity.
 
-This repository is created and maintained by [singularitti](https://github.com/singularitti).
+This repository is created and maintained by [@singularitti](https://github.com/singularitti).
 You are very welcome to contribute.
 
 ## Installation
@@ -32,8 +32,8 @@ julia> import Pkg; Pkg.add("{{{PKG}}}")
 
 ## Documentation
 
-- [**STABLE**](https://{{{org}}}.github.io/{{{PKG}}}.jl/stable) &mdash; **documentation of the most recently tagged version.**
-- [**DEV**](https://{{{org}}}.github.io/{{{PKG}}}.jl/dev) &mdash; _documentation of the in-development version._
+- [**STABLE**](https://{{{USER}}}.github.io/{{{PKG}}}.jl/stable) &mdash; **documentation of the most recently tagged version.**
+- [**DEV**](https://{{{USER}}}.github.io/{{{PKG}}}.jl/dev) &mdash; _documentation of the in-development version._
 
 ## Project Status
 
