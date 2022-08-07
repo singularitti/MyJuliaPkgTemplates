@@ -5,7 +5,6 @@ import PkgTemplates: view, hook
 default_dir() = joinpath(pwd(), "templates")
 
 @plugin struct MyDocs <: Plugin
-    readme_md::String = joinpath(default_dir(), "README.md")
     index_md::String = joinpath(default_dir(), "docs", "src", "index2.md")
     installation_md::String = joinpath(default_dir(), "docs", "src", "installation.md")
     contributing_md::String = joinpath(default_dir(), "docs", "src", "contributing.md")
