@@ -2,7 +2,7 @@
 
 This page collects some possible errors you may encounter and trick how to fix them.
 
-_If you have additional tips, please submit a PR with suggestions._
+_If you have additional tips, please [submit a PR](https://github.com/{{{USER}}}/{{{PKG}}}.jl/compare) with suggestions._
 
 ## Installation problems
 
