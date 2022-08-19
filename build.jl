@@ -15,7 +15,8 @@ default_dir() = joinpath(pwd(), "templates")
 @plugin struct MyDocs <: Plugin
     readme_md::String = joinpath(default_dir(), "README.md")
     installation_md::String = joinpath(default_dir(), "docs", "src", "installation.md")
-    contributing_md::String = joinpath(default_dir(), "docs", "src", "contributing.md")
+    contributing_md::String = joinpath(default_dir(), "docs", "src", "developers", "contributing.md")
+    style_md::String = joinpath(default_dir(), "docs", "src", "developers", "style.md")
     troubleshooting_md::String = joinpath(
         default_dir(), "docs", "src", "troubleshooting.md"
     )
