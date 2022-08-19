@@ -16,10 +16,10 @@ pkg"dev {{{PKG}}}"
 
 in the REPL.
 
-Then the package will be cloned to your local machine at a path. On macOS, by default is
-located at `~/.julia/dev/{{{PKG}}}` unless you modify the `JULIA_DEPOT_PATH`
-environment variable. (See [Julia's official documentation](http://docs.julialang.org/en/v1/manual/environment-variables/#JULIA_DEPOT_PATH-1)
-on how to do this.) In the following text, we will call it `PKGROOT`.
+Then the package will be cloned to your local machine. On *nix systems, the default path is
+`~/.julia/dev/{{{PKG}}}` unless you modify the
+[`JULIA_DEPOT_PATH`](http://docs.julialang.org/en/v1/manual/environment-variables/#JULIA_DEPOT_PATH-1)
+environment variable. In the following text, we will call it `PKGROOT`.
 
 ## [Instantiate the project](@id instantiating)
 
@@ -32,7 +32,7 @@ Pkg.instantiate()
 
 ## How to build docs
 
-Usually, the up-to-state doc is available in
+Usually, the up-to-state doc is available
 [here](https://{{{USER}}}.github.io/{{{PKG}}}.jl/dev), but there are cases
 where users need to build the doc themselves.
 
@@ -42,7 +42,7 @@ After [instantiating](@ref) the project, go to `PKGROOT`, run
 julia --color=yes docs/make.jl
 ```
 
-in your terminal. In a while a folder `PKGROOT/docs/build` will appear. Open
+in your terminal. After a few seconds, a folder `PKGROOT/docs/build` will appear. Open
 `PKGROOT/docs/build/index.html` with your favorite browser and have fun!
 
 ## How to run tests
