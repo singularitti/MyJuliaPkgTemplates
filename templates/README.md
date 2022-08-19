@@ -36,7 +36,7 @@ From the Julia REPL, type `]` to enter the Pkg REPL mode and run:
 pkg> add {{{PKG}}}
 ```
 
-Or, equivalently, via the `Pkg` API:
+Or, equivalently, via the [`Pkg` API](https://pkgdocs.julialang.org/v1/getting-started/):
 
 ```julia
 julia> import Pkg; Pkg.add("{{{PKG}}}")
